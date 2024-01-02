@@ -12298,7 +12298,7 @@
             };
             let xhr = new XMLHttpRequest();
             xhr.open("POST", "https://untitledblack.com/.netlify/functions/sendMail", true);
-            xhr.setRequestHeader("Content-Type", "application/json");
+            xhr.setRequestHeader("Content-Type", "application/json", "Access-Control-Allow-Origin", "*");
             xhr.send(JSON.stringify(data));
             document.getElementById("email-form").reset();
             document.getElementById("email-form").style.display = "none";
