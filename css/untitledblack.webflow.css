@@ -1281,8 +1281,8 @@ figcaption {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 0;
-  padding-bottom: 7rem;
+  padding-top: .1rem;
+  padding-bottom: .1rem;
   display: flex;
 }
 
@@ -3983,6 +3983,85 @@ figcaption {
 
 .heading-3, .heading-4 {
   text-align: center;
+}
+
+.buttons-wraper {
+  width: 100vw;
+  height: 68px;
+  text-align: center;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 139px;
+  margin-bottom: 139px;
+  display: flex;
+}
+
+.neon-button {
+  perspective-origin: 50%;
+  color: #ff00b7;
+  text-transform: uppercase;
+  text-shadow: 0 0 .125em rgba(255, 255, 255, .5), 0 0 .5em #ff00b7;
+  background-color: #292026;
+  border: 4px solid #ff00b7;
+  border-radius: .25em;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: .2em;
+  font-size: 24px;
+  font-weight: 400;
+  text-decoration: none;
+  transition: box-shadow .2s, background-color .2s;
+  display: flex;
+  position: relative;
+  transform: none;
+  box-shadow: inset 0 0 .5em #ff00b7, 0 0 .5em #ff00b7;
+}
+
+.neon-button:hover {
+  color: #292026;
+  background-color: #ff00b7;
+  box-shadow: inset 0 0 .5em #ff00b7, 0 0 2em #ff00b7;
+}
+
+.neon-button._2 {
+  color: #000;
+  text-shadow: 0 0 .125em rgba(255, 255, 255, .5), 0 0 .5em #ff00b7;
+  background-color: #ff00b7;
+  box-shadow: inset 0 0 .5em #ff00b7, 0 0 2em #ff00b7;
+}
+
+.neon-button._2:hover {
+  color: #ff00b7;
+  background-color: #000;
+  box-shadow: inset 0 0 .5em #ff00b7, 0 0 .5em #ff00b7;
+}
+
+.text-block-90 {
+  text-shadow: 0 0 .5em #ff00b7;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.text-block-90._2 {
+  text-shadow: 0 0 .125em rgba(255, 255, 255, .5), 0 0 .5em #ff00b7;
+}
+
+.bottom-shadow {
+  width: 100%;
+  height: 100%;
+  opacity: .7;
+  filter: blur(1em);
+  cursor: default;
+  transform-style: preserve-3d;
+  background-color: #ff00b7;
+  position: absolute;
+  top: 170%;
+  bottom: auto;
+  left: auto;
+  right: auto;
+  transform: perspective(3em)rotateX(40deg)rotateY(0)rotateZ(0)perspective(500px);
 }
 
 @media screen and (max-width: 991px) {
