@@ -12281,30 +12281,10 @@
           var action = data.action = $el.attr("action");
           data.handler = null;
           data.redirect = $el.attr("data-redirect");
-          // send email to hello@untitledblack.com using vanilla JS
-          let form = document.getElementById("email-form-2");
-          form.addEventListener("submit", function(event) {
-            console.log("submit");
-            event.preventDefault();
-            let firstName = document.getElementById("First-Name-6").value;
-            let lastName = document.getElementById("Last-name").value;
-            let email = document.getElementById("Email-2").value;
-            let message = document.getElementById("Message").value;
-            let data = {
-              firstName,
-              lastName,
-              email,
-              message
-            };
-            let xhr = new XMLHttpRequest();
-            xhr.open("POST", "https://untitledblack.com/.netlify/functions/sendMail", true);
-            xhr.setRequestHeader("Content-Type", "application/json", "Access-Control-Allow-Origin", "*");
-            xhr.send(JSON.stringify(data));
-            document.getElementById("email-form").reset();
-            document.getElementById("email-form").style.display = "none";
-            document.getElementById("success-message").style.display = "block";
-          });
-
+          if (chimpRegex.test(action)) {
+            data.handler = submitMailChimp;
+            return;
+          }
           if (action) {
             return;
           }
