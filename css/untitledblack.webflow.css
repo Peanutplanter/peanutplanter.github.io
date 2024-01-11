@@ -1,5 +1,5 @@
 :root {
-  --black: black;
+  --black: rgba(0, 0, 0, 0);
   --white: white;
   --grey-dark: #0d0d12;
   --light: #6a6e87;
@@ -203,8 +203,12 @@ figcaption {
   max-width: 20rem;
 }
 
+.page-wrapper {
+  background-color: #000;
+}
+
 .container-large {
-  width: 100%;
+  width: auto;
   max-width: 80rem;
   color: var(--white);
   flex-direction: column;
@@ -1446,8 +1450,8 @@ figcaption {
 }
 
 .hero_background-image {
-  width: 100%;
-  height: 100%;
+  width: auto;
+  height: auto;
   object-fit: cover;
   object-position: 0% 100%;
   position: absolute;
@@ -1764,6 +1768,10 @@ figcaption {
 
 .pricing_checkmark.is-disabled {
   opacity: 0;
+}
+
+.footer_component {
+  width: auto;
 }
 
 .footer_top-wrapper {
@@ -3986,14 +3994,14 @@ figcaption {
 }
 
 .buttons-wraper {
-  width: 100vw;
+  width: auto;
   height: 68px;
   text-align: center;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin-top: 139px;
-  margin-bottom: 139px;
+  margin-top: 125px;
+  margin-bottom: 71px;
   display: flex;
 }
 
